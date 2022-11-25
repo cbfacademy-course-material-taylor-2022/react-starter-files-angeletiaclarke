@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const PetForm = () => {
   const [name, setName] = useState('');
+  const [age, setAge] = useState(0);
+  const [colours, setColours] = useState('');
   const [,setSubmitted] = useState(false);
 
   function handleSubmit(event) {
@@ -16,6 +18,8 @@ const PetForm = () => {
       <form onSubmit={(e) => handleSubmit(e)}>
         <div>
           <label>Pet's Name:<input type="text" value={name} onChange={(e) => { setName(e.target.value); setSubmitted(false) }} /></label>
+          <label>Age: <input type="number" value={age} onChange={(e) => { setAge(e.target.value); setSubmitted(false) }}/></label>
+          <label>Colours: <input type="text"value={colours} onChange={(e) => { setColours(e.target.value); setSubmitted(false) }}/></label>
         </div>
         <input type="submit" value="Submit" id="submit-button"/>
       </form>
