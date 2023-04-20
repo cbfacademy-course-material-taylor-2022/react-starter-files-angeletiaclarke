@@ -22,3 +22,14 @@ const Book = (props) => {
  );
 }
 export default Book;
+
+addBook()
+function addBook(title) {
+  console.log(`The Book '${title}' was clicked`);
+}
+
+<div>
+         
+{/* <button onClick={() => props.addBook(id)}>Add +</button> */} {/*React part 8 (optional) - replaced addBook with addToBookcase*/}
+<button onClick={() => props.addToBookcase(id)}>Add +</button>
+</div>
